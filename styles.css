@@ -1,0 +1,126 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;    
+}
+
+body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    
+}
+h1,h3{
+    text-align: center;
+}
+h1{
+    background-color: rgb(192, 246, 255);
+    border-radius: 20px;
+    padding:10px;
+    color:rgb(4, 67, 122) !important;
+}
+#container{
+    height: 450px;
+    width: 1200px;
+    position: relative;
+    overflow:hidden;
+    border-radius: 10px;
+    background-color:rgb(253, 247, 211);
+    border-bottom: 10px solid rgb(164, 94, 94);
+  
+}
+
+#container #dino{
+    height: 150px;
+    position:absolute;
+    bottom: 28px;
+    left: 20px;
+}
+
+#container #dino img{
+    height:250px;    
+}
+
+.dinoActive{
+    animation: animateDino 1s linear infinite;
+}
+
+@keyframes animateDino{
+    0%
+    {
+        bottom: 28px;
+    }
+    45%,55%
+    {
+        bottom: 180px;
+    }
+}
+
+#container #cactus{
+    height: 120px;
+    position: absolute;
+    bottom: 20px;
+    right:-20px;
+   
+}
+
+#container #cactus img{
+    height:200px;
+    width:150px;
+}
+
+.cactusActive{
+    animation: cactusAnimate 3s linear infinite;
+}
+
+@keyframes cactusAnimate{
+    0%{
+        right: -125px;
+    }
+    100%{
+        right:100%;
+    }
+}
+
+#container #clouds{
+    height:80px;
+    width:1200px;
+    border-radius: 40px;
+    position: absolute;
+    top: 30px;
+}
+
+#container #clouds img{
+    height: 300px;
+    position: absolute;
+    left: -200px;
+    /* animation: cloudAnimate 5s linear infinite; */
+}
+
+/* 
+@keyframes cloudAnimate {
+    0%
+    {
+        left: -2000px;
+    }
+    100%
+    {
+        left:100%;
+    }
+    
+} */
+
+#score{
+    font-size: 40px;
+    text-align:center;
+    align-items: center; 
+    background-color: rgb(253, 193, 220);
+    border-radius: 10px;
+}
+
+#gameOver{
+    display: none;
+    font-size: 70px;
+    text-align: center;
+}
